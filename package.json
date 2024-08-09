@@ -4,12 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-
-    // "test": "echo \"Error: no test specified\" && exit 1",
-    // "dev": "ts-node-dev --respawn --transpile-only server.ts",
-    // "seed": "ts-node-dev --respawn --transpile-only seeder/user.seed.ts",
-    "start": "ts-node-dev server.ts",
-    "build": "tsc"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node-dev --respawn --transpile-only server.ts",
+    "seed": "ts-node-dev --respawn --transpile-only seeder/user.seed.ts"
   },
   "author": "mohamed kandad",
   "license": "ISC",
