@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course Purchase Confirmation</title>
+    <style>
+      .container {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px 0;
+        text-align: center;
+      }
+      .card {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      }
+      .header {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .logo {
+        max-width: 200px;
+        height: auto;
+      }
+      h1 {
+        color: #333;
+        text-align: center;
+      }
+      p {
+        color: #555;
+        line-height: 1.6;
+        text-align: center;
+      }
+      .button {
+        display: inline-block;
+        padding: 12px 24px;
+        margin-top: 20px;
+        background-color: #363062;
+        color: #fff !important;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+      .button:hover {
+        background-color: #4D4C7D;
+      }
+      span{
+        display: block;
+        font-size: 20px;
+        text-align: center;
+      }
+      .thank-you {
+          font-size: 20px;
+          font-weight: 700;
+          color: #2B2A4C;
+          margin-bottom: 30px;
+      }
+      .course-details {
+          background-color: #f9f9f9;
+          padding: 20px;
+          border-radius: 5px;
+      }
+      .course-details h2 {
+          color: #333;
+          margin-top: 0;
+          margin-bottom: 15px;
+      }
+      .details-list {
+          padding-left: 20px;
+          margin-top: 0;
+      }
+      .details-list li {
+          list-style-type: none;
+          margin-bottom: 8px;
+      }
+      .footer {
+          margin-top: 30px;
+          border-top: 1px solid #ccc;
+          padding-top: 15px;
+          font-size: 12px;
+          color: #777;
+      }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+        <img src="https://res.cloudinary.com/dzwz8hiko/image/upload/v1701612749/images/qdaxcupddhcwpnaqeehu.png" alt="Company Logo" class="logo">
+        <h2>𝙏𝙝𝙖𝙣𝙠 𝙮𝙤𝙪 𝙛𝙤𝙧 𝙥𝙪𝙧𝙘𝙝𝙖𝙨𝙞𝙣𝙜 𝙤𝙪𝙧 𝙘𝙤𝙪𝙧𝙨𝙚!</h2>
+        <p class="thank-you">𝘿𝙚𝙖𝙧 <%= order.userName %>,</p>
+        <p>𝘞𝘦 𝘢𝘳𝘦 𝘦𝘹𝘤𝘪𝘵𝘦𝘥 𝘵𝘰 𝘤𝘰𝘯𝘧𝘪𝘳𝘮 𝘺𝘰𝘶𝘳 𝘱𝘶𝘳𝘤𝘩𝘢𝘴𝘦 𝘰𝘧 𝘵𝘩𝘦 𝘙𝘦𝘢𝘤𝘵 𝘫𝘴 <strong> <%= order.name %></strong> 𝘤𝘰𝘶𝘳𝘴𝘦.</p>
+        <div class="course-details">
+            <h2>𝘾𝙤𝙪𝙧𝙨𝙚 𝘿𝙚𝙩𝙖𝙞𝙡𝙨:</h2>
+            <ul class="details-list">
+                <li><strong>𝘖𝘳𝘥𝘦𝘳 #:</strong> <%= order._id %></li>
+                <li><strong>𝘗𝘳𝘪𝘤𝘦 :</strong> <%= order.price %> $ </li>
+                <li><strong>𝘋𝘢𝘵𝘦 :</strong> <%= order.date %></li>
+                <!-- Add more course details -->
+            </ul>
+        </div>
+        <p>𝘞𝘦 𝘩𝘰𝘱𝘦 𝘵𝘩𝘪𝘴 𝘤𝘰𝘶𝘳𝘴𝘦 𝘩𝘦𝘭𝘱𝘴 𝘺𝘰𝘶 𝘰𝘯 𝘺𝘰𝘶𝘳 𝘭𝘦𝘢𝘳𝘯𝘪𝘯𝘨 𝘫𝘰𝘶𝘳𝘯𝘦𝘺! 𝘚𝘩𝘰𝘶𝘭𝘥 𝘺𝘰𝘶 𝘩𝘢𝘷𝘦 𝘢𝘯𝘺 𝘲𝘶𝘦𝘴𝘵𝘪𝘰𝘯𝘴, 𝘧𝘦𝘦𝘭 𝘧𝘳𝘦𝘦 𝘵𝘰 𝘤𝘰𝘯𝘵𝘢𝘤𝘵 𝘶𝘴.</p>
+        <p>𝙏𝙝𝙖𝙣𝙠 𝙮𝙤𝙪,</p>
+        <h2>𝓔𝓭𝓶𝔂 𝓣𝓮𝓪𝓶</h2>
+        <div class="footer">
+            <p>This is an automated email. Please do not reply.</p>
+        </div>
+    </div>
+  </div>
+</body>
+</html>
